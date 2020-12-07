@@ -1,0 +1,7 @@
+current_book_pages = int(input())
+pages_per_hour = int(input())
+days_left = int(input())
+
+total_daily_time = (current_book_pages / pages_per_hour) / days_left
+
+print(total_daily_time)
