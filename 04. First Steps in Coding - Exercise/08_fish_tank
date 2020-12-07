@@ -1,0 +1,11 @@
+length = int(input())
+width = int(input())
+dept = int(input())
+volume = float(input())
+
+total_volume = length * width * dept
+
+litres = total_volume * 0.001
+percentage = volume / 100
+total_water = litres - percentage * litres
+print(total_water)
