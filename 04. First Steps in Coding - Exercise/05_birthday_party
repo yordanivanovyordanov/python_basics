@@ -1,0 +1,7 @@
+rent = int(input())
+cake = rent * 20
+drinks = 0.55 * cake
+animator = 1/3 * rent
+
+total_price = rent + cake + drinks + animator
+print(total_price)
