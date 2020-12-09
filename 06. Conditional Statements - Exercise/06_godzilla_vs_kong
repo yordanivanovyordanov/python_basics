@@ -1,0 +1,18 @@
+budget = float(input())
+extras = int(input())
+price_costumes = float(input())
+
+decor_price = budget * 0.1
+total_costumes_price = extras * price_costumes
+
+if extras >= 150:
+    total_costumes_price = total_costumes_price - (0.1 * total_costumes_price)
+
+money_needed = decor_price + total_costumes_price
+
+if money_needed <= budget:
+    print("Action!")
+    print(f"Wingard starts filming with {budget - money_needed:.2f} leva left.")
+else:
+    print("Not enough money!")
+    print(f"Wingard needs {money_needed - budget:.2f} leva more.")
