@@ -1,0 +1,21 @@
+income = float(input())
+average_score = float(input())
+minimal_wage = float(input())
+
+scholarship = 0
+Social_scholarship = 0
+Excellent_scholarship = 0
+
+if income < minimal_wage and average_score > 4.5:
+    Social_scholarship = 420 * 0.35
+    print(f"You get a Social scholarship{Social_scholarship: .0f} BGN")
+elif income < minimal_wage and average_score > 5.5:
+    Excellent_scholarship = average_score * 25
+    print(f"You get a scholarship for excellent results{Excellent_scholarship: .0f} BGN")
+elif Social_scholarship > Excellent_scholarship:
+    print(f"You get a Social scholarship{Social_scholarship: .0f} BGN")
+else:
+    print("You cannot get a scholarship!")
+
+print(Social_scholarship)
+print(Excellent_scholarship)
