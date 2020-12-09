@@ -1,0 +1,20 @@
+number = float(input())
+from_metric = input()
+into_metric = input()
+
+m = 0
+cm = 0
+mm = 0
+
+if from_metric == "m" and into_metric == "cm":
+    print(f'{number * 100:.3f}')
+elif from_metric == "cm" and into_metric == "m":
+    print(f'{number / 100:.3f}')
+elif from_metric == "cm" and into_metric == "mm":
+    print(f'{number * 10:.3f}')
+elif from_metric == "mm" and into_metric == "cm":
+    print(f'{number / 10:.3f}')
+elif from_metric == "m" and into_metric == "mm":
+    print(f'{number * 1000:.3f}')
+elif from_metric == "mm" and into_metric == "m":
+    print(f'{number / 1000:.3f}')
