@@ -1,0 +1,17 @@
+import math
+
+year = input().lower()
+holidays = int(input())
+weekends_home = int(input())
+
+sofia_weekends = 48 - weekends_home
+play_sofia = (sofia_weekends * 0.75) + (holidays * 2 / 3)
+play_total = play_sofia + weekends_home
+
+if year == "leap":
+    play_total = play_total + (play_total * 15 / 100)
+
+elif year == "normal":
+    play_total = play_total
+
+print(math.floor(play_total))
