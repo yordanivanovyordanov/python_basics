@@ -1,0 +1,14 @@
+screen_type = input().lower()
+rows = int(input())
+columns = int(input())
+
+price = 0
+
+if screen_type == 'premiere':
+    price = (rows * columns) * 12
+elif screen_type == 'normal':
+    price = (rows * columns) * 7.5
+elif screen_type == 'discount':
+    price = (rows * columns) * 5
+
+print(f"{price:.2f} leva")
