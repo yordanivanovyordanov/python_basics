@@ -1,0 +1,80 @@
+budget = int(input())
+season = input()
+number_of_fishermen = int(input())
+total_price = 0
+
+if season == 'Spring':
+
+    if number_of_fishermen <= 6:
+        total_price = 3000 * 0.90
+
+        if number_of_fishermen % 2 == 0:
+            total_price = (3000 * 0.90) * 0.95
+
+    if number_of_fishermen > 7 <= 11:
+        total_price = 3000 * 0.85
+
+        if number_of_fishermen % 2 == 0:
+            total_price = (3000 * 0.85) * 0.95
+
+    if number_of_fishermen > 12:
+        total_price = 3000 * 0.75
+
+        if number_of_fishermen % 2 == 0:
+            total_price = (3000 * 0.75) * 0.95
+
+elif season == 'Summer':
+
+    if number_of_fishermen <= 6:
+        total_price = 4200 * 0.90
+
+        if number_of_fishermen % 2 == 0:
+            total_price = (4200 * 0.90) * 0.95
+
+    if number_of_fishermen > 7 <= 11:
+        total_price = 4200 * 0.85
+
+        if number_of_fishermen % 2 == 0:
+            total_price = (4200 * 0.85) * 0.95
+
+    if number_of_fishermen > 12:
+        total_price = 4200 * 0.75
+
+        if number_of_fishermen % 2 == 0:
+            total_price = (4200 * 0.75) * 0.95
+
+elif season == 'Autumn':
+
+    if number_of_fishermen <= 6:
+        total_price = 4200 * 0.90
+
+    if number_of_fishermen > 7 <= 11:
+        total_price = 4200 * 0.85
+
+    if number_of_fishermen > 12:
+        total_price = 4200 * 0.75
+
+elif season == 'Winter':
+
+    if number_of_fishermen <= 6:
+        total_price = 2600 * 0.90
+
+        if number_of_fishermen % 2 == 0:
+            total_price = (2600 * 0.90) * 0.95
+
+    if number_of_fishermen > 7 <= 11:
+        total_price = 2600 * 0.85
+
+        if number_of_fishermen % 2 == 0:
+            total_price = (2600 * 0.85) * 0.95
+
+    if number_of_fishermen > 12:
+        total_price = 2600 * 0.75
+
+        if number_of_fishermen % 2 == 0:
+            total_price = (2600 * 0.75) * 0.95
+
+if budget >= total_price:
+    print(f"Yes! You have {budget - total_price:.2f} leva left.")
+else:
+    print(f"Not enough money! You need {total_price - budget:.2f} leva.")
