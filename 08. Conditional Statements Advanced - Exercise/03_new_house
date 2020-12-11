@@ -1,0 +1,39 @@
+flower = input()
+number_of_flowers = int(input())
+budget = int(input())
+total_price = 0
+
+if flower == 'Roses':
+    total_price = 5.00 * number_of_flowers
+
+    if number_of_flowers > 80:
+        total_price = total_price * 0.90
+
+elif flower == 'Dahlias':
+    total_price = 3.80 * number_of_flowers
+
+    if number_of_flowers > 90:
+        total_price = total_price * 0.85
+
+elif flower == 'Tulips':
+    total_price = 2.80 * number_of_flowers
+
+    if number_of_flowers > 80:
+        total_price = total_price * 0.85
+
+elif flower == 'Narcissus':
+    total_price = 3.00 * number_of_flowers
+
+    if number_of_flowers < 120:
+        total_price = total_price * 1.15
+
+elif flower == 'Gladiolus':
+    total_price = 2.50 * number_of_flowers
+
+    if number_of_flowers < 80:
+        total_price = total_price * 1.20
+
+if total_price <= budget:
+    print(f"Hey, you have a great garden with {number_of_flowers} {flower} and {(budget - total_price):.2f} leva left.")
+else:
+    print(f"Not enough money, you need {(total_price - budget):.2f} leva more.")
