@@ -1,0 +1,47 @@
+number_of_games = int(input())
+
+total_score = 0
+score_0_9 = 0
+score_10_19 = 0
+score_20_29 = 0
+score_30_39 = 0
+score_40_50 = 0
+invalid_score = 0
+
+for games in range(1, number_of_games + 1):
+    points = int(input())
+
+    if 0 <= points <= 9:
+        score_0_9 += points * 0.20
+        total_score += points * 0.20
+    elif 10 <= points <= 19:
+        score_10_19 += points * 0.30
+        total_score += points * 0.30
+    elif 20 <= points <= 29:
+        score_20_29 += points * 0.40
+        total_score += points * 0.40
+    elif 30 <= points <= 39:
+        score_30_39 += points * 0.50
+        total_score += points * 0.50
+    elif 40 <= points <= 50:
+        score_40_50 += points * 100
+        total_score += points * 100
+
+    else:
+        invalid_score += points
+        total_score = total_score / 2
+
+percentage_score_0_9 = (score_0_9 / total_score) * 100
+percentage_score_10_19 = (score_10_19 / total_score) * 100
+percentage_score_20_29 = (score_20_29 / total_score) * 100
+percentage_score_30_39 = (score_30_39 / total_score) * 100
+percentage_score_40_50 = (score_40_50 / total_score) * 100
+percentage_invalid_score = (invalid_score / total_score) * 100
+
+print(f'{total_score:.2f}')
+print(f'From 0 to 9: {percentage_score_0_9:.2f}%')
+print(f'From 10 to 19: {percentage_score_10_19:.2f}%')
+print(f'From 20 to 29: {percentage_score_20_29:.2f}%')
+print(f'From 30 to 39: {percentage_score_30_39:.2f}%')
+print(f'From 40 to 50: {percentage_score_40_50:.2f}%')
+print(f'Invalid numbers: {percentage_invalid_score:.2f}%')
