@@ -1,0 +1,16 @@
+tabs = int(input())
+salary = float(input())
+
+for i in range(0, tabs):
+    websites = input()
+    if websites == 'Facebook':
+        salary -= 150
+    if websites == 'Instagram':
+        salary -= 100
+    if websites == 'Reddit':
+        salary -= 50
+
+if salary > 0:
+    print(f'{salary:.0f}')
+else:
+    print('You have lost your salary.')
