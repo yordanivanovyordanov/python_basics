@@ -1,0 +1,22 @@
+width = int(input())
+length = int(input())
+height = int(input())
+
+room_area = width * length * height
+space_needed = 0
+line = input()
+
+while line != 'Done':
+
+    current_box_space = int(line)
+    space_needed += current_box_space
+
+    if space_needed > room_area:
+        break
+
+    line = input()
+
+if space_needed > room_area:
+    print(f'No more free space! You need {space_needed - room_area} Cubic meters more.')
+else:
+    print(f'{room_area - space_needed} Cubic meters left.')
