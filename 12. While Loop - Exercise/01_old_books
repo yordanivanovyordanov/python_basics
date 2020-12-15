@@ -1,0 +1,17 @@
+book_title = input()
+number_of_books = 0
+book_is_found = False
+book = input()
+
+while book != 'No More Books':
+    if book == book_title:
+        book_is_found = True
+        print(f"You checked {number_of_books} books and found it.")
+        break
+
+    number_of_books += 1
+    book = input()
+
+if not book_is_found:
+    print(f"The book you search is not here!")
+    print(f"You checked {number_of_books} books.")
