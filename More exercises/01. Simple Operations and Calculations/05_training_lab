@@ -1,0 +1,9 @@
+import math
+width = float(input())
+height = float(input())
+
+rows = math.floor((width * 100) / 120)
+columns = math.floor((height * 100 - 100) / 70)
+
+seats = rows * columns - 3
+print(seats)
