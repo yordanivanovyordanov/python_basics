@@ -1,0 +1,14 @@
+mackerel_price = float(input())
+sprat_price = float(input())
+belted_bonito_kgs = float(input())
+horse_mackerel_kgs = float(input())
+mussels_kgs = int(input())
+
+belted_bonito_price = (mackerel_price * 1.60)
+horse_mackerel_price = (sprat_price * 1.80)
+mussels_price = 7.50
+
+total_price = (belted_bonito_price * belted_bonito_kgs) + (horse_mackerel_price * horse_mackerel_kgs) \
+              + (mussels_price * mussels_kgs)
+
+print(f'{total_price:.2f}')
