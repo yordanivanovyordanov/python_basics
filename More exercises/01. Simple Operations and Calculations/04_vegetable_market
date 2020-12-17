@@ -1,0 +1,9 @@
+price_of_vegetables = float(input())
+price_of_fruit = float(input())
+vegetables_weight = int(input())
+fruit_weight = int(input())
+
+sum_vegetables = price_of_vegetables * vegetables_weight
+sum_fruit = price_of_fruit * fruit_weight
+price_in_euro = (sum_vegetables + sum_fruit) / 1.94
+print(f'{price_in_euro:.2f}')
