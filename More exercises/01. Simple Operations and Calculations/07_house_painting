@@ -1,0 +1,17 @@
+x = float(input())
+y = float(input())
+h = float(input())
+
+front_and_back_walls = (x * x) * 2 - (1.2 * 2)
+side_walls = (x * y) * 2 - ((1.5 * 1.5) * 2)
+roof_front_back_triangles = ((x * h) / 2) * 2
+roof_sides = (x * y) * 2
+
+wall_area = front_and_back_walls + side_walls
+roof_area = roof_front_back_triangles + roof_sides
+
+green_paint = wall_area / 3.4
+red_paint = roof_area / 4.3
+
+print(f'{green_paint:.2f}')
+print(f'{red_paint:.2f}')
