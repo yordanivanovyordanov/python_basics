@@ -1,0 +1,14 @@
+import math
+
+days = int(input())
+food_kg = int(input())
+dog_food = float(input())
+cat_food = float(input())
+tortoise_food = float(input())
+
+food_per_day = (dog_food + cat_food + (tortoise_food / 1000))
+food_needed = food_per_day * days
+if food_kg >= food_needed:
+    print(f'{math.floor(food_kg - food_needed)} kilos of food left.')
+else:
+    print(f'{math.ceil(food_needed - food_kg)} more kilos of food are needed.')
