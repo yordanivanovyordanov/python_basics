@@ -1,0 +1,20 @@
+import math
+
+magnolias = int(input())
+hyacinth = int(input())
+roses = int(input())
+cactus = int(input())
+present_price = float(input())
+
+magnolias_price = 3.25
+hyacinth_price = 4
+roses_price = 3.5
+cactus_price = 8
+
+total_sum = magnolias * magnolias_price + hyacinth * hyacinth_price + roses * roses_price + cactus * cactus_price
+total_sum_after_tax = total_sum * 0.95
+
+if present_price <= total_sum_after_tax:
+    print(f'She is left with {math.floor(total_sum_after_tax - present_price)} leva.')
+else:
+    print(f'She will have to borrow {math.ceil(present_price - total_sum_after_tax)} leva.')
