@@ -1,0 +1,15 @@
+import math
+
+project_hours = int(input())
+available_days = int(input())
+overtime_workers = int(input())
+
+work_days = available_days * 0.9
+overtime_hours = (available_days * 2) * overtime_workers
+work_hours = work_days * 8
+total_hours = math.floor(work_hours + overtime_hours)
+
+if project_hours <= total_hours:
+    print(f"Yes!{total_hours - project_hours} hours left.")
+else:
+    print(f"Not enough time!{project_hours - total_hours} hours needed.")
