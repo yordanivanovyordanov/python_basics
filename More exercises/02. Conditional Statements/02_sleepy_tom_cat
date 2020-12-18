@@ -1,0 +1,16 @@
+holidays = int(input())
+
+working_days = 365 - holidays
+play_max = 30000
+play_time = (working_days * 63) + (holidays * 127)
+diff = abs(play_time - play_max)
+
+h = diff // 60
+m = diff % 60
+
+if play_time > play_max:
+    print('Tom will run away')
+    print(f'{h} hours and {m} minutes more for play')
+else:
+    print('Tom sleeps well')
+    print(f'{h} hours and {m} minutes less for play')
