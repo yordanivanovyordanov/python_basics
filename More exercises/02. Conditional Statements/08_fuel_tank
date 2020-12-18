@@ -1,0 +1,20 @@
+fuel = input().lower()
+amount = float(input())
+
+if fuel == 'diesel':
+    if amount >= 25:
+        print(f'You have enough {fuel}.')
+    elif amount < 25:
+        print(f'Fill your tank with {fuel}!')
+elif fuel == 'gasoline':
+    if amount >= 25:
+        print(f'You have enough {fuel}.')
+    elif amount < 25:
+        print(f'Fill your tank with {fuel}!')
+elif fuel == 'gas':
+    if amount >= 25:
+        print(f'You have enough {fuel}.')
+    elif amount < 25:
+        print(f'Fill your tank with {fuel}!')
+else:
+    print('Invalid fuel!')
