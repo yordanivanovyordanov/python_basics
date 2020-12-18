@@ -1,0 +1,14 @@
+km = int(input())
+day_or_night = input()
+
+if km < 20:
+    if day_or_night == 'day':
+        price = (km * 0.79) + 0.70
+    else:
+        price = (km * 0.90) + 0.70
+elif 20 <= km < 100:
+    price = km * 0.09
+elif km >= 100:
+    price = km * 0.06
+
+print(f'{price:.2f}')
