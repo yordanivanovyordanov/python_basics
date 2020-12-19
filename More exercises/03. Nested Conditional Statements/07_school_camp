@@ -1,0 +1,52 @@
+season = input().lower()
+group_type = input().lower()
+students = int(input())
+nights = int(input())
+
+price_per_student = 0
+sport_type = None
+
+if season == 'winter':
+    if group_type == 'girls':
+        price_per_student = 9.60
+        sport_type = 'Gymnastics'
+    elif group_type == 'boys':
+        price_per_student = 9.60
+        sport_type = 'Judo'
+    elif group_type == 'mixed':
+        price_per_student = 10
+        sport_type = 'Ski'
+
+elif season == 'spring':
+    if group_type == 'girls':
+        price_per_student = 7.20
+        sport_type = 'Athletics'
+    elif group_type == 'boys':
+        price_per_student = 7.20
+        sport_type = 'Tennis'
+    elif group_type == 'mixed':
+        price_per_student = 9.50
+        sport_type = 'Cycling'
+
+elif season == 'summer':
+    if group_type == 'girls':
+        price_per_student = 15
+        sport_type = 'Volleyball'
+    elif group_type == 'boys':
+        price_per_student = 15
+        sport_type = 'Football'
+    elif group_type == 'mixed':
+        price_per_student = 20
+        sport_type = 'Swimming'
+
+total_price = price_per_student * students * nights
+discount = 0
+
+if students >= 50:
+    discount = total_price * 0.50
+elif 20 <= students < 50:
+    discount = total_price * 0.15
+elif 10 <= students < 20:
+    discount = total_price * 0.05
+
+print(f'{sport_type} {total_price - discount:.2f} lv.')
