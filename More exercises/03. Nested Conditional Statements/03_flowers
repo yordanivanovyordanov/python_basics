@@ -1,0 +1,36 @@
+number_of_chrysantemum = int(input())
+number_of_roses = int(input())
+number_of_tulips = int(input())
+season = input().lower()
+holiday = input()
+
+flowers = (number_of_chrysantemum + number_of_roses + number_of_tulips)
+
+price_of_chrysantemum = 0
+price_of_roses = 0
+price_of_tulips = 0
+
+if season == 'spring' or season == 'summer':
+    price_of_chrysantemum = 2 * number_of_chrysantemum
+    price_of_roses = 4.10 * number_of_roses
+    price_of_tulips = 2.50 * number_of_tulips
+elif season == 'autumn' or season == 'winter':
+    price_of_chrysantemum = 3.75 * number_of_chrysantemum
+    price_of_roses = 4.50 * number_of_roses
+    price_of_tulips = 4.15 * number_of_tulips
+
+total_price = price_of_chrysantemum + price_of_roses + price_of_tulips
+
+if holiday == 'Y':
+    total_price *= 1.15
+
+if season == 'spring' and number_of_tulips >= 7:
+    total_price *= 0.95
+
+if season == 'winter' and number_of_roses >= 10:
+    total_price *= 0.90
+
+if flowers >= 20:
+    total_price *= 0.80
+
+print(f'{2 + total_price:.2f}')
