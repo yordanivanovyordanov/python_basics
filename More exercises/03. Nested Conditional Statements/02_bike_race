@@ -1,0 +1,30 @@
+juniors = int(input())
+seniors = int(input())
+track_type = input().lower()
+
+juniors_price = 0
+seniors_price = 0
+
+if track_type == 'trail':
+    juniors_price = 5.50
+    seniors_price = 7
+elif track_type == 'cross-country':
+    juniors_price = 8
+    seniors_price = 9.50
+elif track_type == 'downhill':
+    juniors_price = 12.25
+    seniors_price = 13.75
+elif track_type == 'road':
+    juniors_price = 20
+    seniors_price = 21.50
+
+if track_type == 'cross-country' and juniors + seniors >= 50:
+    total_sum = ((juniors * juniors_price) + (seniors * seniors_price)) * 0.75
+    organizers_fee = total_sum * 0.05
+    donations = total_sum - organizers_fee
+    print(f'{donations:.2f}')
+else:
+    total_sum = ((juniors * juniors_price) + (seniors * seniors_price))
+    organizers_fee = ((juniors * juniors_price) + (seniors * seniors_price)) * 0.05
+    donations = total_sum - organizers_fee
+    print(f'{donations:.2f}')
