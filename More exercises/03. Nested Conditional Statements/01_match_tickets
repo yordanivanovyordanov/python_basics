@@ -1,0 +1,25 @@
+budget = float(input())
+ticket_type = input().lower()
+fans = int(input())
+
+if ticket_type == 'vip':
+    total_ticket_price = fans * 499.99
+elif ticket_type == 'normal':
+    total_ticket_price = fans * 249.99
+
+if 1 <= fans <= 4:
+    travel_budget = budget * 0.75
+elif 5 <= fans <= 9:
+    travel_budget = budget * 0.60
+elif 10 <= fans <= 24:
+    travel_budget = budget * 0.50
+elif 25 <= fans <= 49:
+    travel_budget = budget * 0.40
+elif fans > 50:
+    travel_budget = budget * 0.25
+
+diff = abs(budget - (total_ticket_price + travel_budget))
+if budget >= total_ticket_price + travel_budget:
+    print(f'Yes! You have {diff:.2f} leva left.')
+else:
+    print(f'Not enough money! You need {diff:.2f} leva.')
