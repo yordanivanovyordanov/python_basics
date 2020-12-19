@@ -1,0 +1,33 @@
+budget = float(input())
+season = input().lower()
+
+car_type = None
+car = None
+total_price = 0
+
+if budget <= 100:
+    car_type = 'Economy class'
+    if season == 'summer':
+        car = 'Cabrio'
+        total_price = budget * 0.35
+    elif season == 'winter':
+        car = 'Jeep'
+        total_price = budget * 0.65
+
+elif 100 < budget < 500:
+    car_type = 'Compact class'
+    if season == 'summer':
+        car = 'Cabrio'
+        total_price = budget * 0.45
+    elif season == 'winter':
+        car = 'Jeep'
+        total_price = budget * 0.80
+
+elif budget > 500:
+    car_type = 'Luxury class'
+    if season == 'summer' or season == 'winter':
+        car = 'Jeep'
+        total_price = budget * 0.90
+
+print(car_type)
+print(f'{car} - {total_price:.2f}')
