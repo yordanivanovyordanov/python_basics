@@ -1,0 +1,11 @@
+number = float(input())
+total_sum = 0
+
+while True:
+    if number < 0:
+        print('Negative number!')
+        print()
+        break
+    total_sum = number * 2
+    print(f'Result: {total_sum:.2f}')
+    number = float(input())
