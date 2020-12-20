@@ -1,0 +1,34 @@
+students = int(input())
+
+excellent = 0
+good = 0
+average = 0
+poor = 0
+average_grade = 0
+
+for grades in range(1, students + 1):
+    grade = float(input())
+    if grade >= 5:
+        average_grade += grade
+        excellent += 1
+    elif 4 <= grade < 4.99:
+        average_grade += grade
+        good += 1
+    elif 3 <= grade < 3.99:
+        average_grade += grade
+        average += 1
+    elif grade < 3:
+        average_grade += grade
+        poor += 1
+
+excellent_percentage = (excellent * 100) / students
+good_percentage = (good * 100) / students
+average_percentage = (average * 100) / students
+poor_percentage = (poor * 100) / students
+average_grade = average_grade / students
+
+print(f'Top students: {excellent_percentage:.2f}%')
+print(f'Between 4.00 and 4.99: {good_percentage:.2f}%')
+print(f'Between 3.00 and 3.99: {average_percentage:.2f}%')
+print(f'Fail: {poor_percentage:.2f}%')
+print(f'Average: {average_grade:.2f}')
