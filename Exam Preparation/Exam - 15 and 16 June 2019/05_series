@@ -1,0 +1,24 @@
+budget = float(input())
+number_of_series = int(input())
+
+for series in range(number_of_series):
+    name = input()
+    price = float(input())
+
+    if name == 'Thrones':
+        budget -= price * 0.50
+    elif name == 'Lucifer':
+        budget -= price * 0.60
+    elif name == 'Protector':
+        budget -= price * 0.70
+    elif name == 'TotalDrama':
+        budget -= price * 0.80
+    elif name == 'Area':
+        budget -= price * 0.90
+    else:
+        budget -= price
+
+if budget >= 0:
+    print(f'You bought all the series and left with {budget:.2f} lv.')
+else:
+    print(f'You need {abs(budget):.2f} lv. more to buy the series!')
