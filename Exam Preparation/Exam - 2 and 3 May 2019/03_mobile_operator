@@ -1,0 +1,96 @@
+contract_duration = input()
+contract_type = input()
+added_data = input()
+number_of_months = int(input())
+
+price_per_month = 0
+
+if contract_duration == 'one':
+    if contract_type == 'Small':
+        price_per_month = 9.98
+        if added_data == 'yes':
+            if price_per_month <= 10:
+                price_per_month += 5.50
+            elif price_per_month <= 30:
+                price_per_month += 4.35
+            elif price_per_month > 30:
+                price_per_month += 3.85
+
+    elif contract_type == 'Middle':
+        price_per_month = 18.99
+        if added_data == 'yes':
+            if price_per_month <= 10:
+                price_per_month += 5.50
+            elif price_per_month <= 30:
+                price_per_month += 4.35
+            elif price_per_month > 30:
+                price_per_month += 3.85
+
+    elif contract_type == 'Large':
+        price_per_month = 25.98
+        if added_data == 'yes':
+            if price_per_month <= 10:
+                price_per_month += 5.50
+            elif price_per_month <= 30:
+                price_per_month += 4.35
+            elif price_per_month > 30:
+                price_per_month += 3.85
+
+    elif contract_type == 'ExtraLarge':
+        price_per_month = 35.99
+        if added_data == 'yes':
+            if price_per_month <= 10:
+                price_per_month += 5.50
+            elif price_per_month <= 30:
+                price_per_month += 4.35
+            elif price_per_month > 30:
+                price_per_month += 3.85
+
+if contract_duration == 'two':
+    if contract_type == 'Small':
+        price_per_month = 8.58
+        if added_data == 'yes':
+            if price_per_month <= 10:
+                price_per_month += 5.50
+            elif price_per_month <= 30:
+                price_per_month += 4.35
+            elif price_per_month > 30:
+                price_per_month += 3.85
+
+    elif contract_type == 'Middle':
+        price_per_month = 17.09
+        if added_data == 'yes':
+            if price_per_month <= 10:
+                price_per_month += 5.50
+            elif price_per_month <= 30:
+                price_per_month += 4.35
+            elif price_per_month > 30:
+                price_per_month += 3.85
+
+    elif contract_type == 'Large':
+        price_per_month = 23.59
+        if added_data == 'yes':
+            if price_per_month <= 10:
+                price_per_month += 5.50
+            elif price_per_month <= 30:
+                price_per_month += 4.35
+            elif price_per_month > 30:
+                price_per_month += 3.85
+
+    elif contract_type == 'ExtraLarge':
+        price_per_month = 31.79
+        if added_data == 'yes':
+            if price_per_month <= 10:
+                price_per_month += 5.50
+            elif price_per_month <= 30:
+                price_per_month += 4.35
+            elif price_per_month > 30:
+                price_per_month += 3.85
+
+if contract_duration == 'two':
+    total_price_before_reduction = price_per_month * number_of_months
+    total_price = total_price_before_reduction * 0.9625
+else:
+    total_price = price_per_month * number_of_months
+
+print(f'{total_price:.2f} lv.')
