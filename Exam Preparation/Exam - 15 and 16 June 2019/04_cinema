@@ -1,0 +1,24 @@
+capacity = int(input())
+command = input()
+total_price = 0
+
+while command != 'Movie time!':
+    customers = int(command)
+    capacity -= customers
+
+    if capacity < 0:
+        break
+
+    if customers % 3 == 0:
+        total_price += (customers * 5) - 5
+    else:
+        total_price += customers * 5
+
+    command = input()
+
+if capacity >= 0:
+    print(f'There are {capacity} seats left in the cinema.')
+else:
+    print(f'The cinema is full.')
+
+print(f'Cinema income - {total_price} lv.')
