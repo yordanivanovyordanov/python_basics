@@ -1,0 +1,33 @@
+import math
+
+wall_height = int(input())
+wall_length = int(input())
+percentage = int(input())
+
+wall_area = wall_height * wall_length
+area_of_all_walls = wall_area * 4
+area_to_paint = math.ceil(area_of_all_walls - (area_of_all_walls * (percentage / 100)))
+
+total_area_covered = 0
+paint_used = input()
+
+while paint_used != 'Tired!':
+    paint_used = int(input())
+    total_area_covered += paint_used
+
+    if total_area_covered >= area_to_paint:
+        paint_used = paint_used
+        if paint_used > 0:
+            total_area_covered += paint_used
+        break
+
+    paint = int(input())
+
+diff = abs(total_area_covered - area_to_paint)
+
+if paint_used == 'Tired!':
+    print(f'{diff} quadratic m left.')
+elif total_area_covered > area_to_paint:
+    print(f'All walls are painted and you have {diff} l paint left!')
+elif total_area_covered == area_to_paint:
+    print(f'All walls are painted! Great job, Pesho!')
