@@ -1,0 +1,25 @@
+profit_wanted = float(input())
+cocktail_name = input()
+
+total_price = 0
+profit = 0
+
+while cocktail_name != 'Party!':
+    number_of_cocktails = int(input())
+
+    cocktail_price = len(cocktail_name)
+    total_price = cocktail_price * number_of_cocktails
+    if total_price % 2 == 1:
+        total_price *= 0.75
+    profit += total_price
+
+    if profit >= profit_wanted:
+        print('Target acquired.')
+        break
+
+    cocktail_name = input()
+
+    if cocktail_name == 'Party!':
+        print(f'We need {profit_wanted - profit:.2f} leva more.')
+
+print(f'Club income - {profit:.2f} leva.')
