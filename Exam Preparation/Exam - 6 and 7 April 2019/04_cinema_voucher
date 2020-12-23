@@ -1,0 +1,32 @@
+voucher = int(input())
+command = input()
+
+price = 0
+tickets = 0
+others = 0
+
+while command != 'End':
+
+    letter_1 = command[0]
+    letter_2 = command[1]
+    length = len(command)
+
+    if length > 8:
+        price = ord(letter_1) + ord(letter_2)
+    else:
+        price = ord(letter_1)
+
+    if voucher - price >= 0:
+        voucher -= price
+        if length > 8:
+            tickets += 1
+        elif length <= 8:
+            others += 1
+
+    else:
+        break
+
+    command = input()
+
+print(f'{tickets}')
+print(f'{others}')
