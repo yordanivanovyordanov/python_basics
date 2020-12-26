@@ -1,0 +1,15 @@
+minutes_control = int(input())
+seconds_control = int(input())
+length = float(input())
+seconds_per_100_metes = int(input())
+
+time_control = minutes_control * 60 + seconds_control
+extra_time = length / 120
+total_extra_time = extra_time * 2.5
+his_time = ((length / 100) * seconds_per_100_metes) - total_extra_time
+
+if his_time <= time_control:
+    print('Marin Bangiev won an Olympic quota!')
+    print(f'His time is {his_time:.3f}.')
+else:
+    print(f'No, Marin failed! He was {his_time - time_control:.3f} second slower.')
