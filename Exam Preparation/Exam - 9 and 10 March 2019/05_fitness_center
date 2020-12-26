@@ -1,0 +1,44 @@
+visitors = int(input())
+
+back_counter = 0
+chest_counter = 0
+legs_counter = 0
+abs_counter = 0
+shake_counter = 0
+bar_counter = 0
+workouts = 0
+buyers = 0
+
+for i in range(1, visitors + 1):
+    line = input()
+
+    if line == 'Back':
+        back_counter += 1
+        workouts += 1
+    elif line == 'Chest':
+        chest_counter += 1
+        workouts += 1
+    elif line == 'Legs':
+        legs_counter += 1
+        workouts += 1
+    elif line == 'Abs':
+        abs_counter += 1
+        workouts += 1
+    elif line == 'Protein shake':
+        shake_counter += 1
+        buyers += 1
+    elif line == 'Protein bar':
+        bar_counter += 1
+        buyers += 1
+
+visitors_percentage = workouts / visitors * 100
+buyers_percentage = buyers / visitors * 100
+
+print(f'{back_counter} - back')
+print(f'{chest_counter} - chest')
+print(f'{legs_counter} - legs')
+print(f'{abs_counter} - abs')
+print(f'{shake_counter} - protein shake')
+print(f'{bar_counter} - protein bar')
+print(f'{visitors_percentage:.2f}% - work out')
+print(f'{buyers_percentage:.2f}% - protein')
