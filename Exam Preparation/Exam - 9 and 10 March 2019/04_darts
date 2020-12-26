@@ -1,0 +1,40 @@
+name_of_player = input()
+
+command = ''
+successful_shots = 0
+unsuccessful_shots = 0
+points = 301
+
+while command != 'Retire':
+    command = input()
+
+    if command == 'Retire':
+        print(f'{name_of_player} retired after {unsuccessful_shots} unsuccessful shots.')
+        break
+
+    current_points = int(input())
+
+    if command == 'Single':
+        points -= current_points
+        if points >= 0:
+            successful_shots += 1
+        else:
+            unsuccessful_shots += 1
+            points += current_points
+    elif command == 'Double':
+        points -= current_points * 2
+        if points >= 0:
+            successful_shots += 1
+        else:
+            unsuccessful_shots += 1
+            points += current_points * 2
+    elif command == 'Triple':
+        points -= current_points * 3
+        if points >= 0:
+            successful_shots += 1
+        else:
+            unsuccessful_shots += 1
+            points += current_points * 3
+
+    if points == 0:
+        print(f'{name_of_player} won the leg with {successful_shots} shots."')
