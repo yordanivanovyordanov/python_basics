@@ -1,0 +1,30 @@
+tournament_name = input()
+
+games_won = 0
+games_lost = 0
+games_counter = 0
+
+while tournament_name != 'End of tournaments':
+    games = int(input())
+    games_counter = 0
+
+    for game in range(0, games):
+        score_team_desi = int(input())
+        score_opposing_team = int(input())
+        games_counter += 1
+
+        if score_team_desi > score_opposing_team:
+            games_won += 1
+            print(f'Game {games_counter} of tournament {tournament_name}: win with '
+                  f'{score_team_desi - score_opposing_team} points.')
+        elif score_team_desi < score_opposing_team:
+            games_lost += 1
+            print(f'Game {games_counter} of tournament {tournament_name}: lost with '
+                  f'{score_opposing_team - score_team_desi} points.')
+
+    tournament_name = input()
+
+percentage_won = games_won * 1.00 / (games_won + games_lost) * 100
+percentage_lost = games_lost * 1.00 / (games_won + games_lost) * 100
+print(f'{percentage_won:.2f}% matches win')
+print(f'{percentage_lost:.2f}% matches lost')
