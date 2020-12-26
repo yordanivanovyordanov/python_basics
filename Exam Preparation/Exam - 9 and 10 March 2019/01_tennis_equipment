@@ -1,0 +1,16 @@
+import math
+
+racket_price = float(input())
+rackets = int(input())
+trainers = int(input())
+
+trainers_price = racket_price / 6
+
+price = (rackets * racket_price) + (trainers * trainers_price)
+accessories = price * 0.20
+total_price = price + accessories
+his_price = total_price / 8
+sponsors_price = total_price - his_price
+
+print(f'Price to be paid by Djokovic {math.floor(his_price)}')
+print(f'Price to be paid by sponsors {math.ceil(sponsors_price)}')
