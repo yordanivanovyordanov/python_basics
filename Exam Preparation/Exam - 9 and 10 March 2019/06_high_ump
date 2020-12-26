@@ -1,0 +1,24 @@
+goal = int(input())
+starting_goal = goal - 30
+failed_attempts = 0
+counter = 0
+
+while starting_goal <= goal:
+    current_jump = int(input())
+
+    if current_jump > starting_goal:
+        starting_goal += 5
+        failed_attempts = 0
+        counter += 1
+    else:
+        failed_attempts += 1
+        counter += 1
+
+    if failed_attempts == 3:
+        break
+
+if failed_attempts == 3:
+    print(f'Tihomir failed at {starting_goal}cm after {counter} jumps.')
+
+else:
+    print(f'Tihomir succeeded, he jumped over {goal}cm after {counter} jumps.')
