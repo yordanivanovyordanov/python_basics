@@ -1,0 +1,68 @@
+country = input()
+discipline = input()
+
+if country == 'Russia':
+    if discipline == 'ribbon':
+        ribbon_total_score = 9.100 + 9.400
+        ribbon_percentage = 20 - ribbon_total_score
+        ribbon_percentage_to_100 = (ribbon_percentage / 20) * 100
+        print(f'The team of {country} get {ribbon_total_score:.3f} on {discipline}.')
+        print(f'{ribbon_percentage_to_100:.2f}%')
+
+    elif discipline == 'hoop':
+        hoop_total_score = 9.300 + 9.800
+        hoop_percentage = 20 - hoop_total_score
+        hoop_percentage_to_100 = (hoop_percentage / 20) * 100
+        print(f'The team of {country} get {hoop_total_score:.3f} on {discipline}.')
+        print(f'{hoop_percentage_to_100:.2f}%')
+
+    elif discipline == 'rope':
+        rope_total_score = 9.600 + 9.000
+        rope_percentage = 20 - rope_total_score
+        rope_percentage_to_100 = (rope_percentage / 20) * 100
+        print(f'The team of {country} get {rope_total_score:.3f} on {discipline}.')
+        print(f'{rope_percentage_to_100:.2f}%')
+
+elif country == 'Bulgaria':
+    if discipline == 'ribbon':
+        ribbon_total_score = 9.600 + 9.400
+        ribbon_percentage = 20 - ribbon_total_score
+        ribbon_percentage_to_100 = (ribbon_percentage / 20) * 100
+        print(f'The team of {country} get {ribbon_total_score:.3f} on {discipline}.')
+        print(f'{ribbon_percentage_to_100:.2f}%')
+
+    elif discipline == 'hoop':
+        hoop_total_score = 9.550 + 9.750
+        hoop_percentage = 20 - hoop_total_score
+        hoop_percentage_to_100 = (hoop_percentage / 20) * 100
+        print(f'The team of {country} get {hoop_total_score:.3f} on {discipline}.')
+        print(f'{hoop_percentage_to_100:.2f}%')
+
+    elif discipline == 'rope':
+        rope_total_score = 9.500 + 9.400
+        rope_percentage = 20 - rope_total_score
+        rope_percentage_to_100 = (rope_percentage / 20) * 100
+        print(f'The team of {country} get {rope_total_score:.3f} on {discipline}.')
+        print(f'{rope_percentage_to_100:.2f}%')
+
+elif country == 'Italy':
+    if discipline == 'ribbon':
+        ribbon_total_score = 9.200 + 9.500
+        ribbon_percentage = 20 - ribbon_total_score
+        ribbon_percentage_to_100 = (ribbon_percentage / 20) * 100
+        print(f'The team of {country} get {ribbon_total_score:.3f} on {discipline}.')
+        print(f'{ribbon_percentage_to_100:.2f}%')
+
+    elif discipline == 'hoop':
+        hoop_total_score = 9.450 + 9.350
+        hoop_percentage = 20 - hoop_total_score
+        hoop_percentage_to_100 = (hoop_percentage / 20) * 100
+        print(f'The team of {country} get {hoop_total_score:.3f} on {discipline}.')
+        print(f'{hoop_percentage_to_100:.2f}%')
+
+    elif discipline == 'rope':
+        rope_total_score = (9.700 + 9.150) / 2
+        rope_percentage = 20 - rope_total_score
+        rope_percentage_to_100 = (rope_percentage / 20) * 100
+        print(f'The team of {country} get {rope_total_score:.3f} on {discipline}.')
+        print(f'{rope_percentage_to_100:.2f}%')
