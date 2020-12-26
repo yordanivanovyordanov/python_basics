@@ -1,0 +1,9 @@
+fee = int(input())
+
+shoes = fee * 0.60
+clothing = shoes * 0.80
+basketball = clothing * 0.25
+accessories = basketball * 0.20
+
+total_price = fee + shoes + clothing + basketball + accessories
+print(f'{total_price:.2f}')
