@@ -1,0 +1,13 @@
+sweet_bread_roles = int(input())
+egg_cards = int(input())
+cookies = int(input())
+
+sweet_bread_roles_price = 3.20
+egg_cards_price = 4.35
+cookies_price = 5.40
+egg_paint_price = 0.15
+
+total_sum = (sweet_bread_roles * sweet_bread_roles_price) + (egg_cards * egg_cards_price) + \
+            (cookies * cookies_price) + (egg_paint_price * (egg_cards * 12))
+
+print(f'{total_sum:.2f}')
