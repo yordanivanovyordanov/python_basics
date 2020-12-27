@@ -1,0 +1,34 @@
+egg_size = input()
+egg_color = input()
+number = int(input())
+
+price = 0
+
+if egg_color == 'Red':
+    if egg_size == 'Large':
+        price = 16
+    elif egg_size == 'Medium':
+        price = 12
+    elif egg_size == 'Small':
+        price = 9
+
+elif egg_color == 'Green':
+    if egg_size == 'Large':
+        price = 12
+    elif egg_size == 'Medium':
+        price = 9
+    elif egg_size == 'Small':
+        price = 8
+
+elif egg_color == 'Yellow':
+    if egg_size == 'Large':
+        price = 9
+    elif egg_size == 'Medium':
+        price = 7
+    elif egg_size == 'Small':
+        price = 5
+
+total_price = price * number
+expenses = total_price * 0.35
+
+print(f'{total_price - expenses:.2f} leva.')
