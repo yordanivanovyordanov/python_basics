@@ -1,0 +1,42 @@
+clients = int(input())
+
+command = ''
+item_counter = 0
+client_counter = 0
+price = 0
+total_price = 0
+average_bill = 0
+
+for clients in range(1, clients + 1):
+    command = input()
+
+    while command != 'Finish':
+        command = input()
+
+        if command == 'basket':
+            item_counter += 1
+            client_counter += 1
+            price += 1.50
+
+        elif command == 'wreath':
+            item_counter += 1
+            client_counter += 1
+            price += 3.80
+
+        elif command == 'chocolate bunny':
+            item_counter += 1
+            client_counter += 1
+            price += 7
+
+        command = input()
+
+    if client_counter % 2 == 0:
+        price *= 0.80
+        average_bill += price
+
+    if command == 'Finish':
+        total_price += price
+        print(f'You purchased {item_counter} items for {price:.2f} leva.')
+
+average_bill /= clients
+print(f'Average bill per client is: {average_bill:.2f} leva.')
