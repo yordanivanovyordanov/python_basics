@@ -1,0 +1,28 @@
+eggs = int(input())
+line = input()
+
+available_eggs = eggs
+sold_eggs = 0
+
+while line != 'Close':
+
+    egg_count = int(input())
+
+    if line == 'Buy':
+        if egg_count <= available_eggs:
+            available_eggs -= egg_count
+            sold_eggs += egg_count
+
+        else:
+            print('Not enough eggs in store!')
+            print(f'You can buy only {available_eggs}.')
+            break
+
+    elif line == 'Fill':
+        available_eggs += egg_count
+
+    line = input()
+
+if line == 'Close':
+    print('Store is closed!')
+    print(f'{sold_eggs} eggs sold.')
