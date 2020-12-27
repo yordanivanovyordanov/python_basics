@@ -1,0 +1,24 @@
+eggs_player1 = int(input())
+eggs_player2 = int(input())
+winner = input()
+
+broken_eggs_p1 = 0
+broken_eggs_p2 = 0
+
+while winner != 'End of battle':
+
+    if winner == 'one':
+        broken_eggs_p2 += 1
+        if broken_eggs_p2 >= eggs_player2:
+            print(f'Player two is out of eggs. Player one has {eggs_player1 - broken_eggs_p1} eggs left.')
+            break
+
+    elif winner == 'two':
+        broken_eggs_p1 += 1
+        if broken_eggs_p1 >= eggs_player1:
+            print(f'Player two is out of eggs. Player one has {eggs_player2 - broken_eggs_p2} eggs left.')
+            break
+
+if winner == 'End of battle':
+    print(f'Player one has {eggs_player1 - broken_eggs_p1} eggs left.')
+    print(f'Player two has {eggs_player2 - broken_eggs_p2} eggs left.')
