@@ -1,0 +1,19 @@
+import math
+
+guests = int(input())
+budget = int(input())
+
+sweet_bread_roll_price = 4
+easter_egg_price = 0.45
+
+sweet_bread_roll_needed = math.ceil(guests / 3)
+easter_egg_needed = guests * 2
+
+sum_needed = (sweet_bread_roll_needed * sweet_bread_roll_price) + (easter_egg_needed * easter_egg_price)
+diff = abs(budget - sum_needed)
+if budget >= sum_needed:
+    print(f'Lyubo bought {sweet_bread_roll_needed} Easter bread and {easter_egg_needed} eggs.')
+    print(f'He has {diff:.2f} lv. left.')
+else:
+    print(f'Lyubo doesn\'t have enough money.')
+    print(f'He needs {diff:.2f} lv. more.')
