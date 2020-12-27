@@ -1,0 +1,14 @@
+flour_price = float(input())
+flour_needed = float(input())
+sugar = float(input())
+egg_cards = int(input())
+yeast = int(input())
+
+sugar_price = flour_price * 0.75
+egg_cards_price = flour_price * 1.10
+yeast_price = sugar_price * 0.20
+
+total_sum = (flour_needed * flour_price) + (sugar * sugar_price) + \
+            (egg_cards * egg_cards_price) + (yeast * yeast_price)
+
+print(f'{total_sum:.2f}')
