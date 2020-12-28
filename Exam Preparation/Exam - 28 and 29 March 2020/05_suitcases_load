@@ -1,0 +1,26 @@
+capacity = float(input())
+command = input()
+
+counter = 0
+is_space = True
+
+while command != "End":
+    volume = float(command)
+
+    if capacity <= volume:
+        print("No more space!")
+        is_space = False
+        break
+
+    capacity -= volume
+    counter += 1
+
+    if counter % 3 == 0:
+        capacity -= volume * 0.10
+
+    command = input()
+
+if is_space:
+    print("Congratulations! All suitcases are loaded!")
+
+print(f"Statistic: {counter} suitcases loaded.")
