@@ -1,0 +1,14 @@
+pen_packs = int(input())
+marker_packs = int(input())
+detergent = float(input())
+discount = int(input())
+
+pen_packs_price = 5.80
+marker_packs_price = 7.20
+detergent_price_per_litre = 1.20
+
+total_price = (pen_packs * pen_packs_price) + (marker_packs * marker_packs_price) + \
+              (detergent * detergent_price_per_litre)
+discounted_price = total_price - ((total_price * discount) / 100)
+
+print(f'{discounted_price:.3f}')
