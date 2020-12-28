@@ -1,0 +1,12 @@
+bitcoin = int(input())
+CNY = float(input())
+commission = float(input())
+
+price_of_bitcoin = bitcoin * 1168
+price_of_CNY = (CNY * 0.15) * 1.76
+total_price = price_of_bitcoin + price_of_CNY
+total_euro = total_price / 1.95
+commission_total = (total_euro / 100) * commission
+
+total_sum = total_euro - commission_total
+print(f'{total_sum:.2f}')
