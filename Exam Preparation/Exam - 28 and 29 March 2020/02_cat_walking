@@ -1,0 +1,13 @@
+minutes_walk = int(input())
+daily_walks = int(input())
+daily_calories = int(input())
+
+burnt_calories = 0
+
+for walk in range(1, minutes_walk + 1):
+    burnt_calories += 5
+
+if (burnt_calories * daily_walks) >= (daily_calories / 2):
+    print(f'Yes, the walk for your cat is enough. Burned calories per day: {burnt_calories * daily_walks}.')
+else:
+    print(f'No, the walk for your cat is not enough. Burned calories per day: {burnt_calories * daily_walks}.')
