@@ -1,0 +1,14 @@
+dog_food = int(input())
+dog_food_in_grammes = dog_food * 1000
+line = input()
+
+eaten_food = 0
+
+while line != 'Adopted':
+    eaten_food += int(line)
+    line = input()
+
+if dog_food_in_grammes >= eaten_food:
+    print(f'Food is enough! Leftovers: {dog_food_in_grammes - eaten_food} grams.')
+else:
+    print(f'Food is not enough. You need {eaten_food - dog_food_in_grammes} grams more.')
