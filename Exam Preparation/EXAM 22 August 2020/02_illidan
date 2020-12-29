@@ -1,0 +1,11 @@
+players = int(input())
+power_per_player = int(input())
+illidans_blood = int(input())
+
+total_power = players * power_per_player
+
+if total_power < illidans_blood:
+    print(f'You are not prepared! You need {illidans_blood - total_power} more points.')
+
+else:
+    print(f'Illidan has been slain! You defeated him with {total_power - illidans_blood} points.')
