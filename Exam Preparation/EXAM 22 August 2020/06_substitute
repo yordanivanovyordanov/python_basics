@@ -1,0 +1,23 @@
+k = int(input())
+l = int(input())
+m = int(input())
+n = int(input())
+
+counter = 0
+
+for num_1 in range(k, 8 + 1):
+    for num_2 in range(9, l - 1, -1):
+        for num_3 in range(m, 8 + 1):
+            for num_4 in range(9, n - 1, - 1):
+
+                if num_1 == num_3 and num_2 == num_4 and num_1 % 2 == 0 and num_2 % 2 == 1:
+                    print(f'Cannot change the same player.')
+                    continue
+
+                if num_1 % 2 == 0 and num_2 % 2 == 1 and num_3 % 2 == 0 and num_4 % 2 == 1:
+                    print(f'{num_1}{num_2} - {num_3}{num_4}')
+                    counter += 1
+                    continue
+
+            if counter == 6:
+                break
