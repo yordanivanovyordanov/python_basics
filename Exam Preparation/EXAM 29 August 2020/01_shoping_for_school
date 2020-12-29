@@ -1,0 +1,13 @@
+pencils = int(input())
+markers = int(input())
+drawing_paper = int(input())
+notebooks = int(input())
+
+pencils_price = pencils * 4.75
+markers_price = markers * 1.80
+drawing_paper_price = drawing_paper * 6.50
+notebooks_price = notebooks * 2.50
+
+price = (pencils_price + markers_price + drawing_paper_price + notebooks_price)
+total_price = price - ((price * 5) / 100)
+print(f'Your total is {total_price:.2f}lv')
