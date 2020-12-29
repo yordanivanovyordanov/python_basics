@@ -1,0 +1,35 @@
+import sys
+
+driver = input()
+
+fastest_driver = ''
+fastest_time = sys.maxsize
+fewest_minutes = 0
+fewest_seconds = 0
+gold_counter = 0
+silver_counter = 0
+bronze_counter = 0
+
+while driver != 'Finish':
+    minutes = int(input())
+    seconds = int(input())
+
+    current_time = (minutes * 60) + seconds
+
+    if current_time < 55:
+        gold_counter += 1
+    elif 55 <= current_time <= 85:
+        silver_counter += 1
+    elif 85 < current_time <= 120:
+        bronze_counter += 1
+
+    if current_time < fastest_time:
+        fastest_time = current_time
+        fastest_driver = driver
+        fewest_minutes = minutes
+        fewest_seconds = seconds
+
+    driver = input()
+
+print(f'With {fewest_minutes} minutes and {fewest_seconds} seconds {fastest_driver} is the winner of the day!')
+print(f'Today\'s prizes are {gold_counter} Gold {silver_counter} Silver and {bronze_counter} Bronze cards!')
