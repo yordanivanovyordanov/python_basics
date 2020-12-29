@@ -1,0 +1,19 @@
+rows = int(input())
+plants = int(input())
+
+strawberries_counter = 0
+blackberries_counter = 0
+strawberries_price = 3.50
+blackberries_price = 5.00
+
+for row in range(1, rows + 1):
+    for plant in range(1, plants + 1):
+        if row % 2 != 0:
+            strawberries_counter += 1
+        elif row % 2 == 0:
+            if plant % 3 != 0:
+                blackberries_counter += 1
+
+total_amount = (strawberries_counter * strawberries_price) + (blackberries_counter * blackberries_price)
+for_sale = total_amount * 0.80
+print(f'Total: {for_sale:.2f} lv.')
