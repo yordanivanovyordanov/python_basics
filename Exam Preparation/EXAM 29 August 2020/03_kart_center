@@ -1,0 +1,36 @@
+amount = float(input())
+laps = input()
+fan_card = input()
+kart_type = input()
+
+price = 0
+
+if laps == 'five':
+    if kart_type == 'Child':
+        price = 7
+    elif kart_type == 'Junior':
+        price = 9
+    elif kart_type == 'Adult':
+        price = 12
+    elif kart_type == 'Profi':
+        price = 18
+
+elif laps == 'ten':
+    if kart_type == 'Child':
+        price = 11
+    elif kart_type == 'Junior':
+        price = 16
+    elif kart_type == 'Adult':
+        price = 21
+    elif kart_type == 'Profi':
+        price = 32
+
+if fan_card == 'yes':
+    total_price = price * 0.80
+else:
+    total_price = price
+
+if amount >= total_price:
+    print(f'You bought {kart_type} ticket for {laps} laps. Your change is {amount - total_price:.2f}lv.')
+else:
+    print(f'You don\'t have enough money! You need {total_price - amount:.2f}lv more.')
