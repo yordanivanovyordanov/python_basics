@@ -1,0 +1,21 @@
+sum_invested = float(input())
+months = int(input())
+
+simple_interest = sum_invested
+compound_interest = sum_invested
+
+for i in range(1, months + 1):
+    simple_interest += 0.03 * sum_invested
+
+for j in range(1, months + 1):
+    last_month = compound_interest
+    compound_interest = last_month + 0.027 * last_month
+
+print(f'Simple interest rate: {simple_interest:.2f} lv.')
+print(f'Complex interest rate: {compound_interest:.2f} lv.')
+
+diff = abs(simple_interest - compound_interest)
+if simple_interest > compound_interest:
+    print(f'Choose a simple interest rate. You will win {diff:.2f} lv.')
+else:
+    print(f'Choose a complex interest rate. You will win {diff:.2f} lv.')
