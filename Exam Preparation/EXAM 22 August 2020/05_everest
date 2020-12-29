@@ -1,0 +1,24 @@
+altitude = 5364
+day_counter = 1
+
+while True:
+    command = input()
+
+    if command == 'END' or day_counter >= 5:
+        print('Failed!')
+        print(f'{altitude}')
+        break
+
+    if command == 'Yes':
+        meters = int(input())
+        altitude += int(meters)
+        day_counter += 1
+        continue
+
+    elif command == 'No':
+        meters = int(input())
+        altitude += int(meters)
+        continue
+
+    elif altitude >= 8848:
+        print(f'Goal reached for {day_counter} days!')
