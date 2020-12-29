@@ -1,0 +1,11 @@
+tickets = int(input())
+budget = int(input())
+ticket_price = int(input())
+
+total_price = tickets * ticket_price
+
+if total_price <= budget:
+    print(f'You can sell your client {tickets} tickets for the price of {total_price}$!')
+    print(f'Your client should become a change of {budget - total_price}$!')
+else:
+    print(f'The budget of {budget}$ is not enough. Your client can\'t buy {tickets} tickets with this budget!')
